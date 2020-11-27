@@ -1,7 +1,7 @@
 package pizzeria;
 
 import pizza.Pizza;
-import pizza.SimpleFabriqueDePizzas;
+import pizza.PizzaFactory;
 
 /**
  * @author bruel (from O'Reilly Head-First series)
@@ -9,17 +9,17 @@ import pizza.SimpleFabriqueDePizzas;
  */
 public abstract class Pizzeria {
 
-	SimpleFabriqueDePizzas fabrique;
+	PizzaFactory factory;
 
-	public Pizzeria(SimpleFabriqueDePizzas f){
-		this.fabrique = f;
+	public Pizzeria(PizzaFactory f){
+		this.factory = f;
 	}
 
 	public final Pizza commanderPizza(String type) {
 
 		Pizza pizza;
 
-		pizza = fabrique.creerPizza(type);
+		pizza = factory.create(type);
 
 		pizza.preparer();
 		pizza.cuire();

@@ -26,16 +26,16 @@ public abstract class Pizza {
 	}
 
 	public void cuire() {
-		System.out.println("Cuisson 25 minutes à 180 degrés");
+		System.out.println("Bake 25 minutes at 180 degrees");
 
 	}
 
 	public void couper() {
-		System.out.println("Découpage en parts");
+		System.out.println("Cut the pizza");
 	}
 
 	public void emballer() {
-		System.out.println("Emballage dans une boîte officielle");
+		System.out.println("Put the pizza in the official box");
 
 	}
 

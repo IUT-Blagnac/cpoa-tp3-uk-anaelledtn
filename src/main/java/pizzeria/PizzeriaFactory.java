@@ -1,7 +1,7 @@
 package pizzeria;
 
-import pizza.SimpleFabriqueDePizzasBrest;
-import pizza.SimpleFabriqueDePizzasStrasbourg;
+import pizza.PizzaFactoryBrest;
+import pizza.PizzaFactoryStrasbourg;
 
 public class PizzeriaFactory {
     private static PizzeriaFactory fabriquePizzeria = new PizzeriaFactory();
@@ -17,11 +17,11 @@ public class PizzeriaFactory {
         Pizzeria pizzeria;
         switch (ville) {
             case "Brest":
-                pizzeria = new PizzeriaStyleBrest(new SimpleFabriqueDePizzasBrest());
+                pizzeria = new PizzeriaBrest(new PizzaFactoryBrest());
                 break;
 
             case "Strasbourg":
-                pizzeria = new PizzeriaStyleStrasbourg(new SimpleFabriqueDePizzasStrasbourg());
+                pizzeria = new PizzeriaStrasbourg(new PizzaFactoryStrasbourg());
                 break;
 
             default:

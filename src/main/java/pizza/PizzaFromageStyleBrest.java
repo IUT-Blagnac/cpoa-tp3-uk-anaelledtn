@@ -7,13 +7,13 @@ package pizza;
 public class PizzaFromageStyleBrest extends Pizza {
     public PizzaFromageStyleBrest() {
         super();
-        this.nom = "Pizza sauce style brest et fromage";
+        this.nom = "Pizza sauce style brest and cheese";
         this.garnitures.add("Parmigiano reggiano râpé");
         
     }
 
     @Override
     public void couper() {
-        System.out.println("Découpage en parts triangulaires");
+        System.out.println("Cut the pizza in triangles");
     }
 }

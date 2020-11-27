@@ -4,13 +4,10 @@ package pizza;
  * @author bruel (from O'Reilly Head-First series)
  * @depend - * - Pizza
  */
-public abstract class SimpleFabriqueDePizzas {
+public abstract class PizzaFactory {
 
-	/**
-	 * @param type
-	 * @return a Pizza object according to the type
-	 */
-	public Pizza creerPizza(String type) {
+
+	public Pizza create(String type) {
 
 		switch (type) {
 			case "fromage":
