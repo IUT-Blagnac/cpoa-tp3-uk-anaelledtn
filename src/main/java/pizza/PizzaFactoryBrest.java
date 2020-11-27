@@ -6,7 +6,7 @@ public class PizzaFactoryBrest extends PizzaFactory {
 
 		switch (type) {
 			case "fromage":
-				return new PizzaFromageStyleBrest();
+				return new PizzaCheeseStyleBrest();
 
 			default:
 				return super.create(type);

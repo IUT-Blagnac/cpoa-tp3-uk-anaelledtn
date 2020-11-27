@@ -4,8 +4,8 @@ package pizza;
  * @author bruel (from O'Reilly Head-First series)
  * @depend - * - Pizza
  */
-public class PizzaFromageStyleBrest extends Pizza {
-    public PizzaFromageStyleBrest() {
+public class PizzaCheeseStyleBrest extends Pizza {
+    public PizzaCheeseStyleBrest() {
         super();
         this.nom = "Pizza sauce style brest and cheese";
         this.garnitures.add("Parmigiano reggiano râpé");

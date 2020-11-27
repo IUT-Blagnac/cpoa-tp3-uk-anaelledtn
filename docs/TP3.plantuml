@@ -11,14 +11,6 @@ class PizzaPoivrons [[java:pizza.PizzaPoivrons]] {
 class Pizza [[java:pizza.Pizza]] {
 }
 Pizza <|-- PizzaPoivrons
-class PizzaFromageStyleStrasbourg [[java:pizza.PizzaFromageStyleStrasbourg]] {
-	+PizzaFromageStyleStrasbourg()
-	+String getNom()
-	+void couper()
-}
-class Pizza [[java:pizza.Pizza]] {
-}
-Pizza <|-- PizzaFromageStyleStrasbourg
 class PizzeriaStrasbourg [[java:pizzeria.PizzeriaStrasbourg]] {
 	+PizzeriaStrasbourg(PizzaFactory f)
 	#Pizza creerPizza(String type)
@@ -26,6 +18,12 @@ class PizzeriaStrasbourg [[java:pizzeria.PizzeriaStrasbourg]] {
 class Pizzeria [[java:pizzeria.Pizzeria]] {
 }
 Pizzeria <|-- PizzeriaStrasbourg
+class PizzaCheese [[java:pizza.PizzaCheese]] {
+	+PizzaCheese()
+}
+class Pizza [[java:pizza.Pizza]] {
+}
+Pizza <|-- PizzaCheese
 abstract class Pizzeria [[java:pizzeria.Pizzeria]] {
 	+Pizzeria(PizzaFactory f)
 	+Pizza commanderPizza(String type)
@@ -34,6 +32,13 @@ abstract class Pizzeria [[java:pizzeria.Pizzeria]] {
 class PizzaFactory [[java:pizza.PizzaFactory]] {
 }
 Pizzeria --> "1" PizzaFactory : factory
+class PizzaCheeseStyleBrest [[java:pizza.PizzaCheeseStyleBrest]] {
+	+PizzaCheeseStyleBrest()
+	+void couper()
+}
+class Pizza [[java:pizza.Pizza]] {
+}
+Pizza <|-- PizzaCheeseStyleBrest
 class PizzaTestDrive [[java:PizzaTestDrive]] {
 	+{static}void main(String[] args)
 }
@@ -55,19 +60,14 @@ abstract class Pizza [[java:pizza.Pizza]] {
 	+void emballer()
 	+String getNom()
 }
-class PizzaFromage [[java:pizza.PizzaFromage]] {
-	+PizzaFromage()
-}
-class Pizza [[java:pizza.Pizza]] {
-}
-Pizza <|-- PizzaFromage
-class PizzaFromageStyleBrest [[java:pizza.PizzaFromageStyleBrest]] {
-	+PizzaFromageStyleBrest()
+class PizzaCheeseStyleStrasbourg [[java:pizza.PizzaCheeseStyleStrasbourg]] {
+	+PizzaCheeseStyleStrasbourg()
+	+String getNom()
 	+void couper()
 }
 class Pizza [[java:pizza.Pizza]] {
 }
-Pizza <|-- PizzaFromageStyleBrest
+Pizza <|-- PizzaCheeseStyleStrasbourg
 class PizzaGrecque [[java:pizza.PizzaGrecque]] {
 }
 class Pizza [[java:pizza.Pizza]] {

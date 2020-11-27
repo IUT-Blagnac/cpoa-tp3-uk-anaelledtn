@@ -7,7 +7,7 @@ public class PizzaFactoryStrasbourg extends PizzaFactory {
 
 		switch (type) {
 			case "fromage":
-				return new PizzaFromageStyleStrasbourg();
+				return new PizzaCheeseStyleStrasbourg();
 
 			default:
 				return super.create(type);
